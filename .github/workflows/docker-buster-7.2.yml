@@ -1,4 +1,4 @@
-name: debian-buster Docker Image CI
+name: Dockerfile Debian Buster - 7.2 CI
 
 on: [push]
 
