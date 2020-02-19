@@ -1,4 +1,4 @@
-name: debian-buster Docker Image CI
+name: Dockerfile Debian Buster - Latest CI
 
 on: [push]
 
@@ -18,11 +18,9 @@ jobs:
       run: sudo apt update && sudo apt install -y tree && tree && ls -lhat
 
     - name: Build Docker image
-      run: docker build . --file 7.4/buster/Dockerfile --tag docker.pkg.github.com/mohsenmottaghi/php-fpm-zts/php-fpm-zts:buster-latest \
-           --tag docker.pkg.github.com/mohsenmottaghi/php-fpm-zts/php-fpm-zts:latest
+      run: docker build . --file 7.4/buster/Dockerfile --tag docker.pkg.github.com/mohsenmottaghi/php-fpm-zts/php-fpm-zts:latest
 
     - name: Push Docker image
       run: |
         docker login docker.pkg.github.com --username mohsenmottaghi -p ${{ secrets.GITHUB_PACKAGES }}
-        docker push docker.pkg.github.com/mohsenmottaghi/php-fpm-zts/php-fpm-zts:buster-latest
         docker push docker.pkg.github.com/mohsenmottaghi/php-fpm-zts/php-fpm-zts:latest
