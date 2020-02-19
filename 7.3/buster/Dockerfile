@@ -1,5 +1,10 @@
 FROM debian:buster-slim
 
+LABEL maintainer "Mohsen Mottaghi"
+LABEL registry_dockerhub "mohsenmottaghi/php-fpm-zts"
+LABEL registry_github "mohsenmottaghi/php-fpm-zts"
+LABEL php_version "7.3" 
+
 ENV PHPIZE_DEPS autoconf dpkg-dev file g++ gcc libc-dev make pkg-config re2c
 ENV PHP_INI_DIR /usr/local/etc/php
 ENV PHP_EXTRA_CONFIGURE_ARGS --enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --enable-maintainer-zts --disable-cgi
