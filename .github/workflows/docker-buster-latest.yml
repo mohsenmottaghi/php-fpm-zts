@@ -15,10 +15,9 @@ jobs:
       run: docker version
 
     - name: Build Docker image
-      run: docker build . --file Dockerfiles/Dockerfile-debian-buster --tag docker.pkg.github.com/mohsenmottaghi/php-fpm-zts/php-fpm-zts:buster-latest --tag docker.pkg.github.com/mohsenmottaghi/php-fpm-zts/php-fpm-zts:latest
+      run: docker build . --file Dockerfiles/Dockerfile-debian-buster --tag docker.pkg.github.com/mohsenmottaghi/php-fpm-zts/php-fpm-zts:latest
 
     - name: Push Docker image
       run: |
         docker login docker.pkg.github.com --username mohsenmottaghi -p ${{ secrets.GITHUB_PACKAGES }}
-        docker push docker.pkg.github.com/mohsenmottaghi/php-fpm-zts/php-fpm-zts:buster-latest
         docker push docker.pkg.github.com/mohsenmottaghi/php-fpm-zts/php-fpm-zts:latest
