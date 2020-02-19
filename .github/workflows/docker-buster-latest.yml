@@ -14,9 +14,6 @@ jobs:
     - name: Docker check
       run: docker version
 
-    - name: Files Check
-      run: sudo apt update && sudo apt install -y tree && tree && ls -lhat
-
     - name: Build Docker image
       run: docker build . --file 7.4/buster/Dockerfile --tag docker.pkg.github.com/mohsenmottaghi/php-fpm-zts/php-fpm-zts:latest
 

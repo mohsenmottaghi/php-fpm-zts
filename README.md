@@ -1,13 +1,15 @@
 # Dockerfile PHP-FPM with ZTS
+![Generic badge](https://img.shields.io/badge/PHP_Version-7.4-darkgreen.svg) ![Generic badge](https://img.shields.io/badge/PHP_Version-7.3-darkgreen.svg) ![Generic badge](https://img.shields.io/badge/PHP_Version-7.2-darkgreen.svg) ![Generic badge](https://img.shields.io/badge/Automatic_Build-OK-<COLOR>.svg) ![Generic badge](https://img.shields.io/badge/Project_phase-BETA-blue.svg)
+
 This repo cloned from `docker-library/php`
 
 ## Build Status
 | Dockerfile | Base Image | PHP Version | Tag | Docker Hub Build | GitHub Build |
 |--|--|--|--|--|--|
-| 7.4/buster/Dockerfile | debian:buster-slim | 7.4 | latest | . | . |
-| 7.4/buster/Dockerfile | debian:buster-slim | 7.4 | 7.4 | . | . |
-| 7.3/buster/Dockerfile | debian:buster-slim | 7.3 | 7.3 | . | . |
-| 7.2/buster/Dockerfile | debian:buster-slim | 7.2 | 7.2 | . | . |
+| 7.4/buster/Dockerfile | debian:buster-slim | 7.4 | latest | ![Generic badge](https://img.shields.io/badge/Build_DockerHub-Pass-<COLOR>.svg) | ![Dockerfile Debian Buster - Latest CI](https://github.com/mohsenmottaghi/php-fpm-zts/workflows/Dockerfile%20Debian%20Buster%20-%20Latest%20CI/badge.svg) |
+| 7.4/buster/Dockerfile | debian:buster-slim | 7.4 | 7.4 | ![Generic badge](https://img.shields.io/badge/Build_DockerHub-Pass-<COLOR>.svg) | ![Dockerfile Debian Buster - 7.4 CI](https://github.com/mohsenmottaghi/php-fpm-zts/workflows/Dockerfile%20Debian%20Buster%20-%207.4%20CI/badge.svg) |
+| 7.3/buster/Dockerfile | debian:buster-slim | 7.3 | 7.3 | ![Generic badge](https://img.shields.io/badge/Build_DockerHub-Pass-<COLOR>.svg) | ![Dockerfile Debian Buster - 7.3 CI](https://github.com/mohsenmottaghi/php-fpm-zts/workflows/Dockerfile%20Debian%20Buster%20-%207.3%20CI/badge.svg) |
+| 7.2/buster/Dockerfile | debian:buster-slim | 7.2 | 7.2 | ![Generic badge](https://img.shields.io/badge/Build_DockerHub-Pass-<COLOR>.svg) | ![Dockerfile Debian Buster - 7.2 CI](https://github.com/mohsenmottaghi/php-fpm-zts/workflows/Dockerfile%20Debian%20Buster%20-%207.2%20CI/badge.svg) |
 
 ## How to use this image
 Create a Dockerfile in your PHP project.
