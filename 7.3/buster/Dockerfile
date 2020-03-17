@@ -2,7 +2,7 @@ FROM debian:buster-slim
 
 LABEL maintainer "Mohsen Mottaghi"
 LABEL registry_dockerhub "mohsenmottaghi/php-fpm-zts"
-LABEL registry_github "mohsenmottaghi/php-fpm-zts"
+LABEL repository_github "mohsenmottaghi/php-fpm-zts"
 LABEL php_version "7.3" 
 
 ENV PHPIZE_DEPS autoconf dpkg-dev file g++ gcc libc-dev make pkg-config re2c
@@ -185,9 +185,7 @@ RUN set -eux; \
 	} | tee php-fpm.d/zz-docker.conf
 
 WORKDIR /var/www/html
-
 STOPSIGNAL SIGQUIT
-
 EXPOSE 9000
 
 ENTRYPOINT ["docker-php-entrypoint"]
