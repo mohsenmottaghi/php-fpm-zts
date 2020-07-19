@@ -10,11 +10,11 @@ ENV PHP_INI_DIR /usr/local/etc/php
 ENV PHP_EXTRA_CONFIGURE_ARGS --enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --enable-maintainer-zts --disable-cgi
 ENV PHP_CFLAGS="-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
 ENV PHP_CPPFLAGS="$PHP_CFLAGS"
-ENV PHP_LDFLAGS="-Wl,-O1 -Wl,--hash-style=both -pie"
+ENV PHP_LDFLAGS="-Wl,-O1 -pie"
 ENV GPG_KEYS 1729F83938DA44E27BA0F4D3DBDB397470D12172 B1B44D8F021E4E2D6021E995DC9FF8D3EE5AF27F
-ENV PHP_VERSION 7.2.27
-ENV PHP_URL="https://www.php.net/get/php-7.2.27.tar.xz/from/this/mirror" PHP_ASC_URL="https://www.php.net/get/php-7.2.27.tar.xz.asc/from/this/mirror"
-ENV PHP_SHA256="7bd0fb9e3b63cfe53176d1f3565cd686f90b3926217158de5ba57091f49e4c32" PHP_MD5=""
+ENV PHP_VERSION 7.2.32
+ENV PHP_URL="https://www.php.net/distributions/php-7.2.32.tar.xz" PHP_ASC_URL="https://www.php.net/distributions/php-7.2.32.tar.xz.asc"
+ENV PHP_SHA256="050fc16ca56d8d2365d980998220a4eb06439da71dfd38de49b42fea72310ef1" PHP_MD5=""
 
 # Copy shell scripts
 COPY 7.4/buster/docker-php-* /usr/local/bin/
